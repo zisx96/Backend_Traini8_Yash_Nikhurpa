@@ -1,0 +1,15 @@
+package com.traini8.training_center.service;
+
+import com.traini8.training_center.entity.Center;
+import jakarta.validation.Valid;
+
+import java.util.List;
+
+public interface ICenterService {
+
+    Center createCenter(@Valid Center center);
+    List<Center> getAllCenters();
+    
+    List<Center> getCentersByCity(String city);
+    List<Center> getCentersByCoursesOffered(List<String> courses);
+}
